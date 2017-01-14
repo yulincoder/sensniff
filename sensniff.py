@@ -150,7 +150,7 @@ class SerialInputHandler(object):
                                       stopbits = serial.STOPBITS_ONE,
                                       xonxoff = False,
                                       rtscts = rts_cts,
-                                      timeout = 0.1)
+                                      timeout = 1)
             self.port.flushInput()
             self.port.flushOutput()
         except (serial.SerialException, ValueError, IOError, OSError) as e:
